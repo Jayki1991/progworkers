@@ -8,3 +8,5 @@ loginButton.addEventListener('click', function(event) {
 function meineFunktion() {
     window.location.href = 'welcome.html';
 }
+
+	
