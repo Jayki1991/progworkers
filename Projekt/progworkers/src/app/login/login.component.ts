@@ -33,7 +33,7 @@ export class LoginComponent {
       next: (res) => {
         console.log('Login erfolgreich!', res);
         this.error = null;
-        this.router.navigate(['home']);
+        this.router.navigate(['home']); // es muss ein  Token (z.B. JWT) generier twerden!
       },
       error: (err) => {
         console.error('Login fehlgeschlagen', err);
