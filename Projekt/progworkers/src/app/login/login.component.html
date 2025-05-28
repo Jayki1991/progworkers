@@ -13,7 +13,7 @@
       >
     </div>
     <div class="input-group">
-      <label for="password">Password</label>
+      <label for="password">Passwort</label>
       <input
         type="password"
         id="password"
@@ -32,7 +32,7 @@
     <p *ngIf="error" class="error-message">{{ error }}</p>
     <button type="submit" class="login-button">Einloggen</button>
   </form>
-  <button class="login-button">Registrieren</button>
+  <button class="login-button" (click)="registration()">Registrieren</button>
   <div class="footer">
     &copy; 2025 Mr Cherry
   </div>

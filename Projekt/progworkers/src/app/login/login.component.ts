@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { HttpClientModule, HttpClient } from '@angular/common/http'; 
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -48,6 +47,9 @@ export class LoginComponent {
         this.email = '';
       }
     });
+  }
+  registration(){
+    this.router.navigate(['registration']);
   }
 }
 
