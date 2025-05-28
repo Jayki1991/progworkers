@@ -42,7 +42,11 @@ export class LoginComponent {
       },
       error: (err) => {
         console.error('Login fehlgeschlagen', err);
-        this.error = 'E-Mail oder Passwort sind falsch!';
+        if(err.status === 0){
+          this.error = "Wir haben zurzeit Probleme mit dem Dienst. Bitte informieren Sie einen Admin!"
+        } else {
+          this.error = 'E-Mail oder Passwort sind falsch!';
+        }
         this.password = '';
         this.email = '';
       }
