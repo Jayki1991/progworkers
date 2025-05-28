@@ -35,7 +35,7 @@ export class LoginComponent {
         if(token) {
           localStorage.setItem('token', token);  // Token speichern
           this.error = null;
-          this.router.navigate(['home']); // es muss ein  Token (z.B. JWT) generier twerden!
+          this.router.navigate(['home']); // nur durch Tken
         } else {
           this.error = 'Token nicht erhalten!';
         }
