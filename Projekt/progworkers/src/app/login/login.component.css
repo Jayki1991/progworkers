@@ -1,0 +1,57 @@
+.switch {
+  position: relative;
+  display: inline-block;  /* wichtig: nicht block, sondern inline-block */
+  width: 50px;
+  height: 28px;
+  margin-right: 12px;
+  vertical-align: middle; /* damit er schön mit Text auf einer Linie bleibt */
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #000000;
+  border-radius: 28px;
+  transition: background-color 0.3s ease;
+  box-shadow: inset 0 0 5px #2a2a2a;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 3px;
+  background-color: #c0a0ff;
+  border-radius: 50%;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 2px 5px rgba(128, 0, 128, 0.5);
+}
+
+input:checked + .slider {
+  background-color: #8a2be2; /* kräftiges Lila */
+  box-shadow: inset 0 0 8px #b185f8;
+}
+
+input:checked + .slider:before {
+  transform: translateX(22px);
+  background-color: #e0ccff;
+  box-shadow: 0 2px 8px rgba(180, 120, 255, 0.8);
+}
+
+/* Optional: Text neben Toggle */
+.status-text {
+  display: inline-block;       /* wichtig, damit width greift */
+  width: 50%;                /* hier genug Platz geben → z. B. 100px */
+  text-align: center;            /* oder center, wenn du es mittig willst */
+  font-size: 1.0rem;
+  color: #ccc;
+  vertical-align: middle;
+}

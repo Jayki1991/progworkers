@@ -17,6 +17,7 @@ export class LoginComponent {
   password = '';
   title = 'progworkers'; 
   error: string | null = null;
+  isAdmin = false;
 
   constructor(private http: HttpClient, private router: Router) {}
 
@@ -25,15 +26,20 @@ export class LoginComponent {
       this.error = 'Bitte E-Mail und Passwort eingeben.';
       return;
     }
-
-    this.http.post('http://localhost:3000/login', {
+    this.http.post<{ token: string; message: string }>('http://localhost:3000/login', {
       email: this.email,
       password: this.password
     }).subscribe({
       next: (res) => {
         console.log('Login erfolgreich!', res);
-        this.error = null;
-        this.router.navigate(['home']); // es muss ein  Token (z.B. JWT) generier twerden!
+        const token = res.token; 
+        if(token) {
+          localStorage.setItem('token', token);  // Token speichern
+          this.error = null;
+          this.router.navigate(['home']); // es muss ein  Token (z.B. JWT) generier twerden!
+        } else {
+          this.error = 'Token nicht erhalten!';
+        }
       },
       error: (err) => {
         console.error('Login fehlgeschlagen', err);

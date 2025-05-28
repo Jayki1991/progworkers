@@ -20,8 +20,14 @@
         name="password"
         [(ngModel)]="password"
         required
-        autocomplete="current-password"
-      >
+        autocomplete="current-password">
+    </div>
+    <div style="text-align:center; padding: 20px;">
+      <label class="switch">
+      <input type="checkbox" name="isAdmin" [(ngModel)]="isAdmin" />
+      <span class="slider"></span>
+      </label>
+      <span class="status-text">{{ isAdmin ? 'Admin' : 'kein Admin' }}</span>
     </div>
     <p *ngIf="error" class="error-message">{{ error }}</p>
     <button type="submit" class="login-button">Einloggen</button>
