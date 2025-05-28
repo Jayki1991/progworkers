@@ -15,3 +15,6 @@
 .accordion.active, .accordion:hover {
     background-color: #6a0dad;
 }
+.panel{
+    display: none;
+}
