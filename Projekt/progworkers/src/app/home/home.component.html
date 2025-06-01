@@ -1,17 +1,17 @@
 <button class="accordion" (click)="toggleAccordion($event)">Jahr 2025/26</button>
 <div class="panel">
-    <ul>
-        <li>Eindruck 1: Aufgabe A</li>
-        <li>Eindruck 2: Aufgabe B</li>
-        <li>Eindruck 3: Aufgabe C</li>
-    </ul>
+    <div *ngFor="let aufgabe of aufgaben" class="aufgabe-card">
+        <h3 class="titel">{{ aufgabe.titel }}</h3>
+        <p class="abgabe">Abgabe: {{ aufgabe.abgabeDatum | date: 'dd.MM.yyyy' }}</p>
+        <p class="status">Status: {{ aufgabe.status }}</p>
+    </div>
 </div>
 
 <button class="accordion" (click)="toggleAccordion($event)">Jahr 2025/26</button>
 <div class="panel">
-    <ul>
-        <li>Eindruck 1: Aufgabe X</li>
-        <li>Eindruck 2: Aufgabe Y</li>
-        <li>Eindruck 3: Aufgabe Z</li>
-    </ul>
+    <div *ngFor="let aufgabe of aufgaben" class="aufgabe-card">
+        <h3 class="titel">{{ aufgabe.titel }}</h3>
+        <p class="abgabe">Abgabe: {{ aufgabe.abgabeDatum | date: 'dd.MM.yyyy' }}</p>
+        <p class="status">Status: {{ aufgabe.status }}</p>
+    </div>
 </div>

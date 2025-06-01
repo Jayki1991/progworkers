@@ -11,6 +11,33 @@
     transition: background-color 0.3s;
     margin-top: 5px;
 }
+.titel {
+  flex: 1 1 200px; /* mindestens 200px */
+}
+
+.abgabe {
+  flex: 1 1 150px; /* mindestens 150px */
+}
+
+.status {
+  flex: 1 1 100px; /* mindestens 100px */
+}
+.aufgabe-card{
+  padding-left: 20px;
+  margin: 10px;
+  transition: background 0.3s ease;
+  display: flex;
+  gap: 1rem; /* Abstand zwischen den Elementen */
+  align-items: center; /* vertikal zentrieren */
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.aufgabe-card:hover{
+    background-color: #9d6ac2;
+}
 
 .accordion.active, .accordion:hover {
     background-color: #6a0dad;
