@@ -1,17 +1,14 @@
-<button class="accordion" (click)="toggleAccordion($event)">Jahr 2025/26</button>
-<div class="panel">
-    <div *ngFor="let aufgabe of aufgaben" class="aufgabe-card">
-        <h3 class="titel">{{ aufgabe.titel }}</h3>
-        <p class="abgabe">Abgabe: {{ aufgabe.abgabeDatum | date: 'dd.MM.yyyy' }}</p>
-        <p class="status">Status: {{ aufgabe.status }}</p>
+<div *ngFor="let j of jahr">
+    <div class="accordion" (click)="toggleAccordion($event)">
+        <h3 class="jahr">Schuljahr Sommer: {{ j.jahr  }}</h3>
+        <p class="abgabecounter">{{ j.abgegebencounter}} von {{ j.abgegebencountermax}} abgegeben</p>
+        <p class="prozent">{{ j.erreichteprozent }}%</p>
     </div>
-</div>
-
-<button class="accordion" (click)="toggleAccordion($event)">Jahr 2025/26</button>
-<div class="panel">
-    <div *ngFor="let aufgabe of aufgaben" class="aufgabe-card">
-        <h3 class="titel">{{ aufgabe.titel }}</h3>
-        <p class="abgabe">Abgabe: {{ aufgabe.abgabeDatum | date: 'dd.MM.yyyy' }}</p>
-        <p class="status">Status: {{ aufgabe.status }}</p>
+    <div class="panel">
+        <div *ngFor="let aufgabe of getAufgabenFuerJahr(j.jahr)" class="aufgabe-card">
+            <h3 class="titel">{{ aufgabe.titel }}</h3>
+            <p class="abgabe">Abgabe: {{ aufgabe.abgabeDatum | date: 'dd.MM.yyyy' }}</p>
+            <p class="status">Status: {{ aufgabe.status }}</p>
+        </div>
     </div>
 </div>
