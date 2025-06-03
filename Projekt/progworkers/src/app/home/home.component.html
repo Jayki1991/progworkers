@@ -4,8 +4,8 @@
         <p class="abgabecounter">{{ j.abgegebencounter}} von {{ j.abgegebencountermax}} abgegeben</p>
         <p class="prozent">{{ j.erreichteprozent }}%</p>
     </div>
-    <div class="panel">
-        <div *ngFor="let aufgabe of getAufgabenFuerJahr(j.jahr)" class="aufgabe-card">
+    <div class="panel" >
+        <div *ngFor="let aufgabe of getAufgabenFuerJahr(j.jahr)" class="aufgabe-card" (click)="showTask(aufgabe)">
             <h3 class="titel">{{ aufgabe.titel }}</h3>
             <p class="abgabe">Abgabe: {{ aufgabe.abgabeDatum | date: 'dd.MM.yyyy' }}</p>
             <p class="status">Status: {{ aufgabe.status }}</p>

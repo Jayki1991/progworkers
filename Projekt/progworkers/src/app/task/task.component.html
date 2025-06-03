@@ -1,0 +1,7 @@
+<div *ngIf="aufgabe">
+  <h2>{{ aufgabe.titel }}</h2>
+  <p>Abgabe: {{ aufgabe.abgabeDatum | date: 'dd.MM.yyyy' }}</p>
+  <p>Status: {{ aufgabe.status }}</p>
+  <button class="login-button" (click)="back()">zurück</button>
+</div>
+
