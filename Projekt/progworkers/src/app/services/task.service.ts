@@ -24,9 +24,10 @@ export class TaskService {
       { id: '7', titel: 'Datenbank-Migration', abgabeDatum: new Date('2026-06-22'), aufgabenjahr: 2026, status: 'bewertet' },
       { id: '8', titel: 'Security-Audit', abgabeDatum: new Date('2026-09-30'), aufgabenjahr: 2026, status: 'offen' }
   ];
-
+  generateDataFromUser(benutzer: string){
+    //DB connection via DB.service.ts ps: keine Aufgaben nur rohdaten holen
+  }
   constructor() {}
-
   // Gibt alle Aufgaben zurück
   getAlleAufgaben(): Aufgabe[]{
     return this.aufgaben;
