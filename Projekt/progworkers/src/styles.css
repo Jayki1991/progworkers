@@ -13,8 +13,13 @@ body {
 
 body:has(app-home) {
   display: block;
+  padding: 30px;
 }
 
+body:has(app-task) {
+  display: block;
+  padding: 30px;
+}
 .login-container {
   background: linear-gradient(135deg, #1a1a1a, #333);
   border: 2px solid silver;

@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common'; // für Fehlerausgabe
 
+
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -35,7 +36,7 @@ export class LoginComponent {
         if(token) {
           localStorage.setItem('token', token);  // Token speichern
           this.error = null;
-          this.router.navigate(['home']); // nur durch Tken
+          this.router.navigate(['home', this.email]); // nur durch Token
         } else {
           this.error = 'Token nicht erhalten!';
         }

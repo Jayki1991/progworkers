@@ -24,7 +24,7 @@ export class TaskService {
       { id: '7', titel: 'Datenbank-Migration', abgabeDatum: new Date('2026-06-22'), aufgabenjahr: 2026, status: 'bewertet' },
       { id: '8', titel: 'Security-Audit', abgabeDatum: new Date('2026-09-30'), aufgabenjahr: 2026, status: 'offen' }
   ];
-  generateDataFromUser(benutzer: string){
+  generateDataFromUserID(benutzerID: number){
     //DB connection via DB.service.ts ps: keine Aufgaben nur rohdaten holen
   }
   constructor() {}

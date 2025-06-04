@@ -1,3 +1,6 @@
+body{
+  padding: 30px;
+}
 .accordion {
     display: flex;
     background-color: #333;

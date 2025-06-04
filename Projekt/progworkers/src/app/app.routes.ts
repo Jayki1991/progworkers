@@ -10,7 +10,7 @@ export const routes: Routes = [
     {path: '', component: LoginComponent},
     {path: 'login', component: LoginComponent },
     {path: 'registration', component: RegistrationComponent},
-    {path: 'home', component: HomeComponent, canActivate: [authGuard] }, // token benötigt
+    {path: 'home/:email', component: HomeComponent, canActivate: [authGuard] }, // token benötigt
     {path: 'task/:id', component: TaskComponent, canActivate: [authGuard] }, // token benötigt
     {path: '', redirectTo: 'login', pathMatch: 'full' }, 
 ];
