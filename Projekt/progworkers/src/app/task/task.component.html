@@ -1,7 +1,16 @@
 <div *ngIf="aufgabe">
-  <h2>{{ aufgabe.titel }}</h2>
-  <p>Abgabe: {{ aufgabe.abgabeDatum | date: 'dd.MM.yyyy' }}</p>
-  <p>Status: {{ aufgabe.status }}</p>
+  
+  <div class="taskHeader">
+    <h2>{{ aufgabe.titel }}</h2>
+    <p>Abgabe: {{ aufgabe.abgabeDatum | date: 'dd.MM.yyyy' }}</p>
+    <p>Status: {{ aufgabe.status }}</p>
+  </div>
+
+  <ngx-monaco-editor
+    [(ngModel)]="code"
+    [options]="editorOptions"
+    style="height: 400px; border: 1px solid #ccc;">
+  </ngx-monaco-editor>
   <button class="login-button" (click)="back()">zurück</button>
 </div>
 

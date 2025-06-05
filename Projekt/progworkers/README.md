@@ -32,3 +32,5 @@ Starte Frontend in VS-Code via "ng serve"
 dann cmd:
 cd backend
 node server.js (für das Backend)
+
+damit dist gebaut wird:--> ng build --configuration development

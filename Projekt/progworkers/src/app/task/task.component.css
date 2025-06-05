@@ -1,0 +1,6 @@
+.taskHeader {
+    display: flex;           /* macht den Container zum Flex-Container */
+    align-items: center;     /* vertikale Ausrichtung der Elemente */
+    gap: 10%;               /* Abstand zwischen den Elementen */
+    flex-wrap: wrap;         /* falls zu eng, Zeilenumbruch erlauben */
+}
