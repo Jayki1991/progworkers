@@ -12,5 +12,6 @@
     style="height: 400px; border: 1px solid #ccc;">
   </ngx-monaco-editor>
   <button class="login-button" (click)="back()">zurück</button>
+  <button class="login-button" (click)="abgeben()" [disabled]="isSubmissionDisabled()">Abgeben</button>
 </div>
 

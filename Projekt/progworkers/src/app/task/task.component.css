@@ -4,3 +4,7 @@
     gap: 10%;               /* Abstand zwischen den Elementen */
     flex-wrap: wrap;         /* falls zu eng, Zeilenumbruch erlauben */
 }
+button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

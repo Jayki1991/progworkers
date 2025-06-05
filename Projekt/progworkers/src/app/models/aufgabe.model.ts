@@ -3,5 +3,5 @@ export interface Aufgabe {
   titel: string;
   abgabeDatum: Date;
   aufgabenjahr: number;
-  status: 'offen' | 'abgegeben' | 'bewertet';
+  status: 'offen' | 'abgegeben' | 'bewertet' | 'abgelaufen';
 }

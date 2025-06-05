@@ -41,6 +41,16 @@ export class TaskComponent implements OnInit{
       this.aufgabe = this.taskService.getAufgabeById(id);
     }
   }
+  isSubmissionDisabled(): boolean {
+    if (this.aufgabe.status == "abgelaufen" || this.aufgabe.status == "abgegeben" || this.aufgabe.status == "bewertet") return true;
+    return false;
+  }
+
+  abgeben() {
+    // Hier würdest du die Logik für die Abgabe implementieren
+    console.log('Code abgegeben:', this.code);
+    // Beispiel: this.taskService.abgabeEinreichen(this.aufgabe.id, this.code);
+  }
   back(){
     this.location.back();
   }
